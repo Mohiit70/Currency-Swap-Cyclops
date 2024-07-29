@@ -1,15 +1,20 @@
-FROM node:14-alpine
+# Use a smaller base image
+FROM node:16-alpine
 
-# Create app directory
-WORKDIR /usr/src/app
+# Set the working directory
+WORKDIR /app
 
-# Install app dependencies
+# Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
+
+# Install dependencies
 RUN npm install
 
-# Bundle app source
+# Copy the rest of the application code
 COPY . .
 
+# Expose the port the app runs on
 EXPOSE 3000
 
-CMD ["node", "server.js"]
+# Command to run the application
+CMD ["npm", "start"]

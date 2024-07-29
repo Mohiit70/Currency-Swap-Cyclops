@@ -1,14 +1,11 @@
 {
-  "name": "currency-exchange-app",
+  "name": "currency-calculator",
   "version": "1.0.0",
-  "description": "Simple currency exchange app",
-  "main": "server.js",
+  "description": "A simple currency calculator",
+  "main": "index.js",
   "scripts": {
     "start": "node server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "express": "^4.17.1"
   }
